@@ -51,6 +51,13 @@ emojis:
   Online: "<a:ServerOnline:1270241229376061451>"
   # Emoji for server offline status
   Offline: "<a:Serveroffline:1270242129850929204>"
+  # Oher Emoji for server status panel
+  ip: "<:ip:1270550942487548009>"
+  port: "<:port:1270551053645123638>"
+  status: "<:status:1270551892728086569>"
+  players: "<:Icon_players:1270551524216410112>"
+  motd: "<:motd:1270552057211781192>"
+  version: "<:version:1270551396692791327>"
 
 # Options to enable or disable specific elements on the status page
 options:

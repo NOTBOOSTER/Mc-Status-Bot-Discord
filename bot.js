@@ -85,6 +85,7 @@ client.on("messageCreate", async (message) => {
   }
 });
 
+
 //Updating status panel
 setInterval(async () => {
   try {
@@ -98,7 +99,7 @@ setInterval(async () => {
         });
       }
 
-      embed.setColor(`${setup.onlineColor}`).setTitle(`${server.name} Status`);
+      embed.setColor(`${setup.onlineColor}`).setTitle(`${config.emojis.Online} ${server.name} Is Online`);
       if (options.icon) {
         embed.setThumbnail(setup.iconLink);
       }
@@ -106,33 +107,28 @@ setInterval(async () => {
         embed.setImage(setup.bannerLink);
       }
       if (options.ip) {
-        embed.addFields({ name: "Ip", value: server.host, inline: setup.inline });
+        embed.addFields({ name: `${config.emojis.ip} Ip`, value: server.host, inline: setup.inline });
       }
       if (options.port) {
-        embed.addFields({ name: "Port", value: server.port, inline: setup.inline });
+        embed.addFields({ name: `${config.emojis.port} Port`, value: server.port, inline: setup.inline });
       }
-      embed.addFields({
-        name: "Status",
-        value: `${config.emojis.Online} Online`,
-        inline: setup.inline,
-      });
       if (options.players) {
         embed.addFields({
-          name: "Players",
+          name: `${config.emojis.players} Players`,
           value: `${status.players.online}/${status.players.max}`,
           inline: setup.inline,
         });
       }
       if (options.version) {
         embed.addFields({
-          name: "Version",
+          name: `${config.emojis.version} Version`,
           value: `${server.version}`,
           inline: setup.inline,
         });
       }
       if (options.motd) {
         embed.addFields({
-          name: "MOTD",
+          name: `${config.emojis.motd} MOTD`,
           value: `\`\`\`${status.motd.clean}\`\`\``,
           inline: false, // default is false
         });
@@ -144,7 +140,7 @@ setInterval(async () => {
           type: ActivityType.Playing,
         });
       }
-      embed.setColor(`${setup.offlineColor}`).setTitle(`${server.name} Status`);
+      embed.setColor(`${setup.offlineColor}`).setTitle(`${config.emojis.Offline} ${server.name} Is Offline`);
       if (options.icon) {
         embed.setThumbnail(setup.iconLink);
       }
@@ -152,19 +148,14 @@ setInterval(async () => {
         embed.setImage(setup.bannerLink);
       }
       if (options.ip) {
-        embed.addFields({ name: "Ip", value: server.host, inline: setup.inline });
+        embed.addFields({ name: `${config.emojis.ip} Ip`, value: server.host, inline: setup.inline });
       }
       if (options.port) {
-        embed.addFields({ name: "Port", value: server.port, inline: setup.inline });
+        embed.addFields({ name: `${config.emojis.port} Port`, value: server.port, inline: setup.inline });
       }
-      embed.addFields({
-        name: "Status",
-        value: `${config.emojis.Offline} Offline`,
-        inline: setup.inline,
-      });
       if (options.version) {
         embed.addFields({
-          name: "Version",
+          name: `${config.emojis.version} Version`,
           value: `${server.version}`,
           inline: setup.inline,
         });

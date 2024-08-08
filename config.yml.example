@@ -1,0 +1,69 @@
+# ███╗░░██╗░█████╗░████████╗██████╗░░█████╗░░█████╗░░██████╗████████╗███████╗██████╗░
+# ████╗░██║██╔══██╗╚══██╔══╝██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗
+# ██╔██╗██║██║░░██║░░░██║░░░██████╦╝██║░░██║██║░░██║╚█████╗░░░░██║░░░█████╗░░██████╔╝
+# ██║╚████║██║░░██║░░░██║░░░██╔══██╗██║░░██║██║░░██║░╚═══██╗░░░██║░░░██╔══╝░░██╔══██╗
+# ██║░╚███║╚█████╔╝░░░██║░░░██████╦╝╚█████╔╝╚█████╔╝██████╔╝░░░██║░░░███████╗██║░░██║
+# ╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░╚═════╝░░╚════╝░░╚════╝░╚═════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝
+
+TOKEN: "Enter Your Bot Token" # Enter your bot token here
+BOTNAME: "BStatus" # Enter the discord bot name
+
+# Configuration for the status panel
+setup:
+  # URL of the banner image
+  bannerLink: "https://media.discordapp.net/attachments/1270414814530900180/1270414892075323483/eb439d02-2394-49a9-8691-35f4d12262e8_1.jpeg?ex=66b39d91&is=66b24c11&hm=34ab0740c7196dc1f07a87e117f42732df72f4d94076b215253df6cef38b5d89&=&format=webp&width=1280&height=500"
+  # URL of the icon image
+  iconLink: "https://media.discordapp.net/attachments/1270414814530900180/1270414891639111760/81326e27-3a0c-4183-8847-c108c5174b28-removebg-preview.png?ex=66b39d91&is=66b24c11&hm=2877b09be8d22c6f2e8337f8da6b4144492afd97b5ebe8afd518eececa94329f&=&format=webp&quality=lossless&width=625&height=625"
+  # Color of the embed message when the server is online
+  onlineColor: "#00e30f"
+  # Color of the embed message when the server is offline
+  offlineColor: "#ff2121"
+  # User ID of the person authorized to set up the status panel
+  userId: "740929329122246756"
+  # Command to set up the status panel
+  command: "Bsetup"
+  # Enable or disable the status panel command
+  enableCmd: true # Set to true to enable, false to 
+  # Enable or disable bot activity
+  activity: false # Set to true to enable, false to disable
+
+# Configuration for the server status
+server:
+  # Name of the server
+  name: "NOTBOOSTER"
+  # Description of the server (optional)
+  description: "Best Minecraft server"
+  # IP address of the server
+  host: "play.mysrv.net"
+  # Port of the server. If running both Java and Bedrock versions, enter the Bedrock port here and set defaultPort to false
+  port: "19132"
+  # Use the default port if true. If false, the status API will use the specified port above
+  defaultPort: true
+  # Version of the server to display on the status panel
+  version: "[1.8.x - 1.21.x]"
+  # Delay in seconds for status panel updates (minimum 10 seconds)
+  delay: 30
+
+# Emojis for server status
+emojis:
+  # Emoji for server online status
+  Online: "<a:ServerOnline:1270241229376061451>"
+  # Emoji for server offline status
+  Offline: "<a:Serveroffline:1270242129850929204>"
+
+# Options to enable or disable specific elements on the status page
+options:
+  # Show or hide the IP address on the status panel
+  ip: true
+  # Show or hide the port on the status panel
+  port: false
+  # Show or hide the number of players on the status panel
+  players: true
+  # Show or hide the server version on the status panel
+  version: false
+  # Show or hide the MOTD (Message of the Day) on the status panel
+  motd: false
+  # Show or hide the icon on the status panel
+  icon: true
+  # Show or hide the banner on the status panel
+  banner: true

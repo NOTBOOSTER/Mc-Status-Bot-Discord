@@ -106,35 +106,35 @@ setInterval(async () => {
         embed.setImage(setup.bannerLink);
       }
       if (options.ip) {
-        embed.addFields({ name: "Ip", value: server.host, inline: false });
+        embed.addFields({ name: "Ip", value: server.host, inline: setup.inline });
       }
       if (options.port) {
-        embed.addFields({ name: "Port", value: server.port, inline: false });
+        embed.addFields({ name: "Port", value: server.port, inline: setup.inline });
       }
       embed.addFields({
         name: "Status",
         value: `${config.emojis.Online} Online`,
-        inline: false,
+        inline: setup.inline,
       });
       if (options.players) {
         embed.addFields({
           name: "Players",
           value: `${status.players.online}/${status.players.max}`,
-          inline: false,
+          inline: setup.inline,
         });
       }
-      if (options.port) {
+      if (options.version) {
         embed.addFields({
           name: "Version",
           value: `${server.version}`,
-          inline: false,
+          inline: setup.inline,
         });
       }
       if (options.motd) {
         embed.addFields({
           name: "MOTD",
           value: `\`\`\`${status.motd.clean}\`\`\``,
-          inline: false,
+          inline: false, // default is false
         });
       }
     } else {
@@ -152,21 +152,21 @@ setInterval(async () => {
         embed.setImage(setup.bannerLink);
       }
       if (options.ip) {
-        embed.addFields({ name: "Ip", value: server.host, inline: false });
+        embed.addFields({ name: "Ip", value: server.host, inline: setup.inline });
       }
       if (options.port) {
-        embed.addFields({ name: "Port", value: server.port, inline: false });
+        embed.addFields({ name: "Port", value: server.port, inline: setup.inline });
       }
       embed.addFields({
         name: "Status",
         value: `${config.emojis.Offline} Offline`,
-        inline: false,
+        inline: setup.inline,
       });
-      if (options.port) {
+      if (options.version) {
         embed.addFields({
           name: "Version",
           value: `${server.version}`,
-          inline: false,
+          inline: setup.inline,
         });
       }
     }

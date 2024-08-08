@@ -26,6 +26,7 @@ setup:
   enableCmd: true # Set to true to enable, false to 
   # Enable or disable bot activity
   activity: false # Set to true to enable, false to disable
+  inline : false # To enable or disable inline status
 
 # Configuration for the server status
 server:

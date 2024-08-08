@@ -129,7 +129,7 @@ setInterval(async () => {
       if (options.motd) {
         embed.addFields({
           name: `${config.emojis.motd} MOTD`,
-          value: `\`\`\`${status.motd.clean}\`\`\``,
+          value: `\`\`\`${status.motd.clean}        \`\`\``,
           inline: false, // default is false
         });
       }

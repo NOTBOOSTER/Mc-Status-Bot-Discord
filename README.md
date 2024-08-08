@@ -2,7 +2,7 @@
 
 This bot provides real-time status updates for your Minecraft server in a Discord channel. It fetches the server status, including player count and server online/offline status, and updates an embed message in your Discord server.
 
-=======
+
 ![Screenshot 2024-08-07 104008](https://github.com/user-attachments/assets/6cfcb3c9-8879-422d-9ca1-dc3169ed9115)
 ![Screenshot 2024-08-07 102526](https://github.com/user-attachments/assets/b815690f-dbc3-44d6-acb4-46a18fa68313) 
 
@@ -38,6 +38,7 @@ Follow these instructions to set up and run the bot on your local machine.
 2. Install the necessary dependencies:
    ```sh
    npm install
+   npm run build
    ```
 
 4. Rename the configuration file and enter your details:
@@ -50,44 +51,13 @@ Follow these instructions to set up and run the bot on your local machine.
 
    ```yaml
    TOKEN: "YOUR_DISCORD_BOT_TOKEN"
-   BOTNAME: "YourBotName"
-
-   setup:
-     bannerLink: "YOUR_BANNER_LINK"
-     iconLink: "YOUR_ICON_LINK"
-     onlineColor: "#00e30f"
-     offlineColor: "#ff2121"
-     userId: "YOUR_USER_ID"
-     command: "Bsetup"
-     enableCmd: true
-
-   server:
-     name: "Your Server Name"
-     description: "Your Server Description"
-     host: "your.server.ip"
-     port: "25565"
-     version: "[1.8.x - 1.21.x]"
-     defaultPort: true
-     delay: 15
-
-   emojis:
-     Online: "<a:ServerOnline:123456789012345678>"
-     Offline: "<a:Serveroffline:123456789012345678>"
-   
-   options:
-     ip: true
-     port: false
-     players: true
-     version: false
-     motd: false
-     icon: true
-     banner: true
    ```
 
 6. Run the bot:
 
    ```sh
    node index.js
+   npm run start
    ```
 
 ### Usage

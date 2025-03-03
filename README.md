@@ -3,8 +3,9 @@
 This bot provides real-time status updates for your Minecraft server in a Discord channel. It fetches the server status, including player count and server online/offline status, and updates an embed message in your Discord server.
 
 
-![Screenshot 2024-08-07 104008](https://github.com/user-attachments/assets/6cfcb3c9-8879-422d-9ca1-dc3169ed9115)
-![Screenshot 2024-08-07 102526](https://github.com/user-attachments/assets/b815690f-dbc3-44d6-acb4-46a18fa68313) 
+![Screenshot 2024-08-08 213649](https://github.com/user-attachments/assets/f6ca1203-a01a-49bf-8682-c57a5615677a)
+![Screenshot 2024-08-08 221640](https://github.com/user-attachments/assets/62ba5a92-12b9-4db2-b494-8537056fde99)
+
 
 
 

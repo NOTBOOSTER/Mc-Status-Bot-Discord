@@ -21,14 +21,22 @@ const client = new Client({
 });
 
 //importing variables
-
 const config = yaml.load(fs.readFileSync("./config.yml", "utf8"));
+if (!fs.existsSync("messageId.yml")) {
+  console.log(`${prefix} messageId.yml file not found creating a new one...`);
+  fs.writeFileSync("messageId.yml", "messageId:\'\'\nchannelId:\'\'", "utf8");
+  console.log(`${prefix} messageId.yml file created successfully...`);
+}
 const messageId = yaml.load(fs.readFileSync("messageId.yml", "utf8"));
+
+
 const token = config.TOKEN;
 const server = config.server;
 const options = config.options;
 const setup = config.setup;
 const prefix = `\x1b[31m${config.BOTNAME} ▶ \x1b[33m`;
+
+console.log(`${prefix} Variables Imported Successfully...`);
 
 // some basics things
 console.log(`${prefix}Starting Bot...`);
